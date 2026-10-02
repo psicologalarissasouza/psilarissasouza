@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psicóloga Larissa Cristina Oliveira de Souza | CRP 06/231307</title>
+<meta name="description" content="Atendimento psicológico. Escolha o dia e o horário e agende pelo WhatsApp.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F8F1E5;--ink:#3A2A20;--muted:#6B5646;--teal:#7A4E32;--teal-d:#5A3822;--mist:#EDE0CB;--sand:#E3CFAF;--white:#FFFCF7;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:18px}
+p{margin:0 0 14px;max-width:62ch}
+.btn{display:inline-block;background:var(--teal);color:#fff;text-decoration:none;border:0;border-radius:999px;padding:14px 28px;font:600 16px Figtree,sans-serif;cursor:pointer}
+.btn:hover{background:var(--teal-d)}
+.btn.ghost{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+nav b{font:500 20px Newsreader,serif}
+.hero{padding:40px 0 80px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(38px,6vw,64px);margin-bottom:20px}
+.hero p{font-size:19px;color:var(--muted)}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.portrait{aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r);background:var(--mist) center/cover;display:grid;place-items:center;color:var(--teal);font:500 90px Newsreader,serif;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.band{background:var(--mist)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:28px}
+.item{background:var(--white);border-radius:var(--r);padding:26px}
+.item h3{font-size:22px;margin-bottom:8px}
+.item p{color:var(--muted);margin:0;font-size:16px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.steps li{counter-increment:s;display:flex;gap:16px;align-items:flex-start}
+.steps li::before{content:counter(s);flex:none;width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:600}
+.book{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start}
+.card{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+label,.lbl{display:block;font-weight:600;font-size:15px;margin:18px 0 8px}
+.lbl:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:500 15px Figtree,sans-serif;padding:9px 14px;border-radius:10px;border:1.5px solid #D8C6AE;background:#fff;color:var(--ink);cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+input[type=text],textarea{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid #D8C6AE;font:400 16px Figtree,sans-serif}
+.card .btn{width:100%;margin-top:22px;text-align:center}
+.hint{font-size:14px;color:var(--muted);margin-top:10px}
+.err{color:#9B2C2C;font-size:14px;min-height:20px;margin-top:10px}
+.faq details{background:#fff;border-radius:var(--r);padding:16px 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-weight:600}
+.faq details p{margin:10px 0 0;color:var(--muted)}
+footer{background:var(--teal-d);color:#F1E6D6;padding:44px 0;font-size:15px}
+footer p{max-width:none;margin:0 0 6px}
+.wa{position:fixed;right:16px;bottom:16px;z-index:5;background:#1FA855;color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.2)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.about img,.portrait img{display:block;width:100%;object-fit:cover;object-position:top}
+.about img{aspect-ratio:4/5;border-radius:var(--r)}
+.logoband{background:#EFEAE4;padding:44px 22px;text-align:center}
+.logoband img{width:min(480px,100%);height:auto}
+@media(max-width:800px){.about{grid-template-columns:1fr}.about img{max-width:340px}.hero,.book{grid-template-columns:1fr}.portrait{max-width:300px;order:-1}section{padding:52px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <b id="navNome"></b>
+    <a class="btn ghost" href="#contato" style="padding:9px 20px">Contato</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1 id="titulo"></h1>
+      <p id="subtitulo"></p>
+      <div class="row">
+        <a class="btn" id="btnZapHero" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a class="btn ghost" href="#sobre-mim">Conhecer meu trabalho</a>
+      </div>
+    </div>
+    <div class="portrait" id="foto" role="img" aria-label="Foto da psicóloga"></div>
+  </header>
+</div>
+
+<section class="band" id="sobre-mim">
+  <div class="wrap about">
+    <img id="fotoSobre" alt="">
+    <div>
+      <h2>Sobre mim</h2>
+      <div id="sobre"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como posso ajudar</h2>
+    <div class="grid" id="servicos"></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <ol class="steps" id="passos"></ol>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="wrap" style="text-align:center">
+    <h2>Vamos conversar?</h2>
+    <p style="margin:0 auto 24px">Me chame no WhatsApp para tirar dúvidas e combinar o melhor dia e horário para você.</p>
+    <a class="btn" id="btnZapContato" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <p class="hint" style="margin:14px auto 0" id="infoValor"></p>
+  </div>
+</section>
+
+<section class="band faq">
+  <div class="wrap">
+    <h2>Dúvidas frequentes</h2>
+    <div id="faq"></div>
+  </div>
+</section>
+
+<div class="logoband"><img id="logo" alt="Logo de Larissa Cristina Oliveira de Souza, Psicóloga Clínica CRP 06/231307"></div>
+
+<footer>
+  <div class="wrap">
+    <p><strong id="rodNome"></strong> · Psicóloga · <span id="rodCrp"></span></p>
+    <p id="rodContato"></p>
+    <p>As informações compartilhadas no atendimento são protegidas pelo sigilo profissional.</p>
+  </div>
+</footer>
+
+<a class="wa" id="zapFlutuante" href="#" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+/* ==========================================================
+   ÁREA DE EDIÇÃO: mude apenas o que está entre aspas.
+   Abra este arquivo no Bloco de Notas, edite, salve e
+   atualize a página no navegador.
+   ========================================================== */
+const CONFIG = {
+  nome: "Larissa Cristina Oliveira de Souza",
+  crp: "CRP 06/231307",
+  whatsapp: "5516997339291",          // código do país + DDD + número, só números
+  cidade: "",                          // ex.: "Ribeirão Preto - SP" (deixe vazio para ocultar)
+
+  foto: "images/larissa-1.jpg",        // foto principal (topo da página)
+  fotoSobre: "images/larissa-2.jpg",   // foto da seção "Sobre mim"
+  logo: "images/logo.jpg",             // logo (faixa acima do rodapé)
+
+  titulo: "Um espaço seguro para cuidar da sua saúde mental",
+  subtitulo: "Atendimento psicológico com escuta ética e acolhedora. Fale comigo pelo WhatsApp e vamos conversar.",
+
+  sobre: [
+    "Sou psicóloga e atendo pessoas que buscam compreender melhor suas emoções, relações e momentos de mudança.",
+    "Meu compromisso é com um atendimento ético, sigiloso e respeitoso ao seu ritmo. Escreva aqui um pouco da sua formação e abordagem."
+  ],
+
+  servicos: [
+    { titulo: "Ansiedade e estresse", texto: "Apoio para lidar com preocupação excessiva, tensão e sobrecarga do dia a dia." },
+    { titulo: "Autoconhecimento", texto: "Um espaço para entender suas escolhas, padrões e o que você deseja para a vida." },
+    { titulo: "Relacionamentos", texto: "Reflexão sobre vínculos familiares, afetivos e profissionais." },
+    { titulo: "Momentos de transição", texto: "Companhia em mudanças, perdas, decisões e novas fases." }
+  ],
+
+  passos: [
+    "Clique em Chamar no WhatsApp e envie sua mensagem.",
+    "Eu respondo, tiro suas dúvidas e explico como funciona o atendimento.",
+    "Combinamos juntas o dia e o horário que ficam bons para você.",
+    "Fazemos a primeira sessão."
+  ],
+
+  mensagem: "Olá! Gostaria de saber mais sobre o atendimento psicológico.",   // texto que já aparece escrito no WhatsApp
+  valor: "",                           // ex.: "Sessão de 50 minutos · R$ 150,00" (vazio para ocultar)
+
+  faq: [
+    { p: "Quanto tempo dura a sessão?", r: "Em geral, 50 minutos. Combinamos a frequência juntas." },
+    { p: "O atendimento é sigiloso?", r: "Sim. Tudo o que é conversado está protegido pelo sigilo profissional, conforme o Código de Ética do Psicólogo." },
+    { p: "Posso remarcar?", r: "Pode. Peço apenas que avise com antecedência pelo WhatsApp." }
+  ]
+};
+/* ===================== FIM DA ÁREA DE EDIÇÃO ===================== */
+
+const $ = id => document.getElementById(id);
+const C = CONFIG;
+const zap = txt => "https://wa.me/" + C.whatsapp + (txt ? "?text=" + encodeURIComponent(txt) : "");
+const pad = n => String(n).padStart(2,"0");
+
+// Textos fixos
+$("navNome").textContent = "Psicóloga " + C.nome;
+$("titulo").textContent = C.titulo;
+$("subtitulo").textContent = C.subtitulo;
+$("rodNome").textContent = C.nome;
+$("rodCrp").textContent = C.crp;
+$("rodContato").textContent = "WhatsApp: " + C.whatsapp.replace(/^55(\d{2})(\d{5})(\d{4})$/,"($1) $2-$3") + (C.cidade ? " · " + C.cidade : "");
+$("btnZapContato").href = zap(C.mensagem);
+$("btnZapHero").href = zap(C.mensagem);
+$("zapFlutuante").href = zap(C.mensagem);
+if (C.valor) $("infoValor").textContent = C.valor;
+
+$("fotoSobre").src = C.fotoSobre; $("fotoSobre").alt = "Foto de " + C.nome;
+$("logo").src = C.logo;
+// Foto ou iniciais
+const foto = $("foto");
+if (C.foto) { const i = new Image(); i.src = C.foto; i.alt = "Foto de " + C.nome; i.fetchPriority = "high"; foto.appendChild(i); }
+else foto.textContent = C.nome.split(" ").filter((w,i,a)=>i==0||i==a.length-1).map(w=>w[0]).join("");
+
+// Listas
+$("sobre").innerHTML = C.sobre.map(t => "<p></p>").join("");
+[...$("sobre").children].forEach((el,i)=>el.textContent = C.sobre[i]);
+C.servicos.forEach(s => { const d = document.createElement("div"); d.className="item"; const h=document.createElement("h3"); h.textContent=s.titulo; const p=document.createElement("p"); p.textContent=s.texto; d.append(h,p); $("servicos").appendChild(d); });
+C.passos.forEach(t => { const li = document.createElement("li"); li.textContent = t; $("passos").appendChild(li); });
+C.faq.forEach(f => { const d = document.createElement("details"); const s = document.createElement("summary"); s.textContent = f.p; const p = document.createElement("p"); p.textContent = f.r; d.append(s,p); $("faq").appendChild(d); });
+
+</script>
+</body>
+</html>
